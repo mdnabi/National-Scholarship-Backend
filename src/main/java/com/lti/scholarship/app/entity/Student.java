@@ -1,14 +1,16 @@
 package com.lti.scholarship.app.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="TBL_STUDENT")
+@Table(name = "TBL_STUDENT")
 public class Student {
-	
+
 	@Id
+	@Column(name="adharno",unique=true)
 	private long adharno;
 	private String stateofdomicile;
 	private String name;
@@ -16,7 +18,6 @@ public class Student {
 	private String mobileno;
 	private String email;
 	private String institutecode;
-	private String password;
 
 	public String getStateofdomicile() {
 		return stateofdomicile;
@@ -74,12 +75,10 @@ public class Student {
 		this.adharno = adharno;
 	}
 
-	public String getPassword() {
-		return password;
+	@Override
+	public String toString() {
+		return "Student [adharno=" + adharno + ", stateofdomicile=" + stateofdomicile + ", name=" + name + ", gender="
+				+ gender + ", mobileno=" + mobileno + ", email=" + email + ", institutecode=" + institutecode + "]";
 	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
+	
 }
