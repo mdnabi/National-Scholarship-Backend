@@ -1,6 +1,5 @@
 package com.lti.scholarship.app.entity;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -14,85 +13,102 @@ public class Student {
 	@GeneratedValue
 	private int student_id;
 	
-	private String adharno;
-	
-	private String stateofdomicile;
+	private String stateOfDomicile;
+	private String district;
 	private String name;
+	private String dob;
 	private String gender;
-	private String mobileno;
+	private String mobileNo;
 	private String email;
-	private String institutecode;
-
-
-
+	private String instituteCode;
+	private String adharNo;
+	private String bankIfscCode;
+	private String bankAccNo;
+	private String bankName;
+	private String password;
 	public int getStudent_id() {
 		return student_id;
 	}
-
 	public void setStudent_id(int student_id) {
 		this.student_id = student_id;
 	}
-
-	public String getStateofdomicile() {
-		return stateofdomicile;
+	public String getStateOfDomicile() {
+		return stateOfDomicile;
 	}
-
-	public void setStateofdomicile(String stateofdomicile) {
-		this.stateofdomicile = stateofdomicile;
+	public void setStateOfDomicile(String stateOfDomicile) {
+		this.stateOfDomicile = stateOfDomicile;
 	}
-
+	public String getDistrict() {
+		return district;
+	}
+	public void setDistrict(String district) {
+		this.district = district;
+	}
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	public String getDob() {
+		return dob;
+	}
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
 	public String getGender() {
 		return gender;
 	}
-
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
-	public String getMobileno() {
-		return mobileno;
+	public String getMobileNo() {
+		return mobileNo;
 	}
-
-	public void setMobileno(String mobileno) {
-		this.mobileno = mobileno;
+	public void setMobileNo(String mobileNo) {
+		this.mobileNo = mobileNo;
 	}
-
 	public String getEmail() {
 		return email;
 	}
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	public String getInstitutecode() {
-		return institutecode;
+	public String getInstituteCode() {
+		return instituteCode;
 	}
-
-	public void setInstitutecode(String institutecode) {
-		this.institutecode = institutecode;
+	public void setInstituteCode(String instituteCode) {
+		this.instituteCode = instituteCode;
 	}
-
-	public String getAdharno() {
-		return adharno;
+	public String getAdharNo() {
+		return adharNo;
 	}
-
-	public void setAdharno(String adharno) {
-		this.adharno = adharno;
+	public void setAdharNo(String adharNo) {
+		this.adharNo = adharNo;
 	}
-
-	@Override
-	public String toString() {
-		return "Student [adharno=" + adharno + ", stateofdomicile=" + stateofdomicile + ", name=" + name + ", gender="
-				+ gender + ", mobileno=" + mobileno + ", email=" + email + ", institutecode=" + institutecode + "]";
+	public String getBankIfscCode() {
+		return bankIfscCode;
+	}
+	public void setBankIfscCode(String bankIfscCode) {
+		this.bankIfscCode = bankIfscCode;
+	}
+	public String getBankAccNo() {
+		return bankAccNo;
+	}
+	public void setBankAccNo(String bankAccNo) {
+		this.bankAccNo = bankAccNo;
+	}
+	public String getBankName() {
+		return bankName;
+	}
+	public void setBankName(String bankName) {
+		this.bankName = bankName;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 }

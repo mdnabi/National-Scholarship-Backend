@@ -22,10 +22,9 @@ public class StudentController {
 	
 	@RequestMapping(path="/student/add", method=RequestMethod.POST)
 	@CrossOrigin
-	public Student add(@RequestBody Student student) {
-		System.out.println(student);
+	public String add(@RequestBody Student student) {
 		studentService.add(student);
-		return student;
+		return "record added successfully";
 	}
 	
 }
