@@ -2,6 +2,7 @@ package com.lti.scholarship.app.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,14 +11,27 @@ import javax.persistence.Table;
 public class Student {
 
 	@Id
-	@Column(name="adharno",unique=true)
-	private long adharno;
+	@GeneratedValue
+	private int student_id;
+	
+	private String adharno;
+	
 	private String stateofdomicile;
 	private String name;
 	private String gender;
 	private String mobileno;
 	private String email;
 	private String institutecode;
+
+
+
+	public int getStudent_id() {
+		return student_id;
+	}
+
+	public void setStudent_id(int student_id) {
+		this.student_id = student_id;
+	}
 
 	public String getStateofdomicile() {
 		return stateofdomicile;
@@ -67,11 +81,11 @@ public class Student {
 		this.institutecode = institutecode;
 	}
 
-	public long getAdharno() {
+	public String getAdharno() {
 		return adharno;
 	}
 
-	public void setAdharno(long adharno) {
+	public void setAdharno(String adharno) {
 		this.adharno = adharno;
 	}
 
