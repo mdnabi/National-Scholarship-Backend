@@ -17,7 +17,6 @@ public class InstituteService {
 
 	@Transactional
 	public void add(Institute institute) {
-		System.out.println("service called");
 		genericRepository.store(institute);
 	}
 	

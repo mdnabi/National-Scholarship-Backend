@@ -32,13 +32,13 @@ public class NationalScholarshipApplicationTests {
 	public void addStudent() {
 		// Test case 1
 		Student student = new Student();
-		/*
-		 * student.setAdharno("845769582143");
-		 * student.setStateofdomicile("Maharashtra"); student.setName("Bob");
-		 * student.setGender("Male"); student.setMobileno("1234567890");
-		 * student.setEmail("abc@gmail.com"); student.setInstitutecode("AC505");
-		 * System.out.println("student test called"); studentService.add(student);
-		 */
+		
+/*		  student.setAdharno("845769582143");
+		  student.setStateofdomicile("Maharashtra"); student.setName("Bob");
+		  student.setGender("Male"); student.setMobileno("1234567890");
+		  student.setEmail("abc@gmail.com"); student.setInstitutecode("AC505");*/
+		  System.out.println("student test called"); studentService.add(student);
+		 
 
 		// Test case 2
 		/*
@@ -89,7 +89,7 @@ public class NationalScholarshipApplicationTests {
 	@Test
 	@Transactional
 	public void fetchById() {
-		Student student = studentService.fetchById(1);
+		//Student student = studentService.fetchById(1);
 		//System.out.println(student.getAdharno());
 		//assertEquals("845769582143", student.getAdharno());
 		// assertEquals("abc@gmail.com", student.getEmail());

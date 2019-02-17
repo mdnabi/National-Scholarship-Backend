@@ -11,27 +11,19 @@ import com.lti.scholarship.app.entity.Institute;
 import com.lti.scholarship.app.entity.Student;
 
 @RestController
+@CrossOrigin
 public class InstituteController {
 	
 	@Autowired
 	private InstituteService instituteService;
 	
-	@RequestMapping(path="/i")
-	@CrossOrigin
-	public String test() {
-		return "Data added";
-		
-	}
-
 	
 	@RequestMapping(path="/institute/add", method=RequestMethod.POST)
 	@CrossOrigin
-	public Institute add(@RequestBody Institute institute) {
-		System.out.println(institute);
+	public String add(@RequestBody Institute institute) {
 		instituteService.add(institute);
-		return institute;
+		return "record added successfully";
+
 	}
-	
-	
-	
+		
 }
